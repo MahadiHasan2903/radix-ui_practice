@@ -1,95 +1,93 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import { Container, Flex, Heading, Text, Card, Badge } from "@radix-ui/themes";
+import { ChatBubbleIcon } from "@radix-ui/react-icons";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <Container size="1" mt="9">
+        <Flex direction="column" pb="4">
+          <Heading>Coding Issue Tracker</Heading>
+          <Text color="gray">
+            Here you can find the issues relevant to your certain project.
+          </Text>
+        </Flex>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <Flex gap="4" direction="column">
+          <Card>
+            <Flex gap="1" direction="column">
+              <Text>Issue #24 - Button Is Wrong Color</Text>
+              <Flex gap="2">
+                <Badge color="orange">Devops</Badge>
+                <Badge color="blue">UI</Badge>
+              </Flex>
+              <Text>
+                This is an issue that is very serious. On a dashboard that only
+                5 users use, there is a button that is the wrong shade of green.
+                This is mission critical.
+              </Text>
+              <Flex justify="between" pt="1">
+                <Flex align="center">
+                  {" "}
+                  {/* align icon to our text */}
+                  <ChatBubbleIcon />
+                  <Text color="gray" ml="2" size="1">
+                    3 Comments
+                  </Text>
+                </Flex>
+              </Flex>
+            </Flex>
+          </Card>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+          <Card>
+            <Flex gap="1" direction="column">
+              <Text>Issue #24 - Button Is Wrong Color</Text>
+              <Flex gap="2">
+                <Badge color="red">Backend</Badge>
+              </Flex>
+              <Text>
+                This is an issue that is very serious. On a dashboard that only
+                5 users use, there is a button that is the wrong shade of green.
+                This is mission critical.
+              </Text>
+              <Flex justify="between" pt="1">
+                <Flex align="center">
+                  {" "}
+                  {/* align icon to our text */}
+                  <ChatBubbleIcon />
+                  <Text color="gray" ml="2" size="1">
+                    3 Comments
+                  </Text>
+                </Flex>
+              </Flex>
+            </Flex>
+          </Card>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+          <Card>
+            <Flex gap="1" direction="column">
+              <Text>Issue #24 - Button Is Wrong Color</Text>
+              <Flex gap="2">
+                <Badge color="green">Hacking Team</Badge>
+              </Flex>
+              <Text>
+                This is an issue that is very serious. On a dashboard that only
+                5 users use, there is a button that is the wrong shade of green.
+                This is mission critical.
+              </Text>
+              <Flex justify="between" pt="1">
+                <Flex align="center">
+                  {" "}
+                  {/* align icon to our text */}
+                  <ChatBubbleIcon />
+                  <Text color="gray" ml="2" size="1">
+                    3 Comments
+                  </Text>
+                </Flex>
+              </Flex>
+            </Flex>
+          </Card>
+        </Flex>
+      </Container>
     </main>
-  )
+  );
 }
